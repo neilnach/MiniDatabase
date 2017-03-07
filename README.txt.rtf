@@ -1,0 +1,37 @@
+In my implementation, I used an array of structs to store and edit my database. I read in the data from the database.csv file and stored it in my array of structs. After that, I read in the commands.csv file and performed the commands asked for. I used the database.csv file as my database, and everything is stored back in there. Here is a method by method breakdown. 
+
+
+createMovieArray()
+This method initializes my variables and array of structs. 
+
+
+char * trim(char * str);
+This method trims the white spaces off the beginning of my words when I need to read the database.csv file and the commands.csv file. 
+
+
+readFile(char * fileName);
+This method reads in the data into my data structure from the database.csv file. It does not return anything, just simply adds the data in.
+
+
+void addData(char *title, char *date, char *director, char * ID);
+This method adds data into my array of structs.
+
+
+void editData(char * ID, char * feature, char * data);
+This method edits data inside my array of structs.
+
+
+void removeData(char * ID);
+This method removes data inside my array of structs. 
+
+
+void lookup(char * feature, char * data);
+This method lookups the data based on the feature passed in, and outputs the data into the outputFile.csv file. 
+
+
+void display(char * feature, char * flag, char * max);
+Method was not implemented. 
+
+main();
+In my main, I split up the words in the commands.csv file using the strtok() function. 
+I stored each of the word into an array and passed them into the different methods.  
